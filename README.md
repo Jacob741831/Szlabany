@@ -216,16 +216,16 @@ stateDiagram-v2
     direction LR
 
     OTWARTE --> OTWARTE: Oczekiwanie na pociąg
-    OTWARTE --> ZAMYKANIE: Pierwszy czujnik / alarm 5s
+    OTWARTE --> ZAMYKANIE: Pierwszy czujnik / alarm 5s / mandat
 
-    ZAMYKANIE --> ZAMYKANIE: Upływ czasu
+    ZAMYKANIE --> ZAMYKANIE: Upływ czasu / mandat
     ZAMYKANIE --> ZAMKNIETE: Po 5 sekundach
 
-    ZAMKNIETE --> ZAMKNIETE: Oczekiwanie na pociąg
+    ZAMKNIETE --> ZAMKNIETE: Oczekiwanie na pociąg / nie da się przejechać
     ZAMKNIETE --> OTWIERANIE: Drugi czujnik / alarm 5s
 
-    OTWIERANIE --> OTWIERANIE: Upływ czasu
-    OTWIERANIE --> OTWARTE: Po 5 sekundach
+    OTWIERANIE --> OTWARTE: można przejezdzac
+    OTWIERANIE --> ALARM: Przez 5 sekundach dopóki alarm nie zgaśnie można dostać mandat
 ```
 
 ### Dodatkowa logika alarmu i samochodu
