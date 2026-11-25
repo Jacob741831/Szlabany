@@ -215,8 +215,6 @@ mermaid
 stateDiagram-v2
     direction LR
 
-    [*] --> OTWARTE: Uruchomienie programu
-
     OTWARTE --> OTWARTE: Oczekiwanie na pociąg
     OTWARTE --> ZAMYKANIE: Pierwszy czujnik / alarm 5s
 
